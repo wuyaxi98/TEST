@@ -23,12 +23,9 @@ public class ReflectUtils {
     public static String addClass(Class fatherName)throws Exception{
         String sunName = fatherName.getSimpleName()+"Impl";
         StringBuilder stringBuilder = new StringBuilder();
-        File f = new File("D:\\"+sunName+".java");
-        FileOutputStream fos = new FileOutputStream(f);
-        OutputStreamWriter dos = new OutputStreamWriter(fos);
 
         stringBuilder.append("import "+ fatherName.getPackage()+";"+ Constant.HUANHANG);
-        dos.append(Constant.HUANHANG);
+        stringBuilder.append(Constant.HUANHANG);
 
         stringBuilder.append("import org.slf4j.Logger;"+Constant.HUANHANG);
         stringBuilder.append("import org.slf4j.LoggerFactory;"+Constant.HUANHANG);
@@ -117,8 +114,6 @@ public class ReflectUtils {
                 stringBuilder.append("log.info("+methodName+"方法执行结束);"+Constant.HUANHANG);
                 stringBuilder.append("}"+Constant.HUANHANG);
                 stringBuilder.append(Constant.HUANHANG);
-
-
             }
 
         }

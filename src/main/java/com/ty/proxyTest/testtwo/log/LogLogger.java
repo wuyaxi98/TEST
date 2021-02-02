@@ -1,4 +1,4 @@
-package com.ty.proxyTest.testtwo;
+package com.ty.proxyTest.testtwo.log;
 
 public class LogLogger extends LogTest.Logger1 {
     @Override

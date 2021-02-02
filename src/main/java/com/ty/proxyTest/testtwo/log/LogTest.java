@@ -1,4 +1,4 @@
-package com.ty.proxyTest.testtwo;
+package com.ty.proxyTest.testtwo.log;
 
 import java.lang.reflect.Proxy;
 

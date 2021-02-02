@@ -1,5 +1,5 @@
 package com.ty.proxyTest.testtwo.utils;
-import com.ty.proxyTest.testtwo.TransactionalInvocationHandler;
+import com.ty.proxyTest.testtwo.log.TransactionalInvocationHandler;
 import org.apache.commons.lang3.ArrayUtils;
 import java.io.File;
 import java.io.FileOutputStream;

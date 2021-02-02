@@ -1,7 +1,5 @@
 package com.ty.proxyTest.testtwo;
 
-import java.util.PrimitiveIterator;
-
 public class Father {
     private String name;
     private  int age;
