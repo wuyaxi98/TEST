@@ -17,5 +17,10 @@ public class Father {
 
     }
 
+    public void  eat(){
+        System.out.println("没吃没喝");
+
+    }
+
 
 }

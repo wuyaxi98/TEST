@@ -91,21 +91,21 @@ public class ReflectUtils {
                 }
                 stringBuilder.append(paramsTypes[params.length-1].getSimpleName() + " " + params[params.length-1].getName() );
                 stringBuilder.append(")" +" {"+Constant.HUANHANG);;
-                stringBuilder.append("log.info(\"开始执行"+ methodName+"方法\");"+Constant.HUANHANG);
+                stringBuilder.append("log.info(\"开始执行有参"+ methodName+"方法\");"+Constant.HUANHANG);
                 for (int i = 0; i < params.length - 1; i++) {
                     stringBuilder.append("super."+ methodName +"("+ params[i].getName()+ ",");
                 }
                 stringBuilder.append(params[params.length - 1].getName() + ");" + Constant.HUANHANG);
-                stringBuilder.append("log.info(\""+methodName+"方法执行结束\");"+Constant.HUANHANG);
+                stringBuilder.append("log.info(\""+methodName+"有参方法执行结束\");"+Constant.HUANHANG);
                 stringBuilder.append("}"+Constant.HUANHANG);
                 stringBuilder.append(Constant.HUANHANG);
 
             }
             else {
                 stringBuilder.append(")" +" {"+Constant.HUANHANG);
-                stringBuilder.append("log.info(开始执行"+ methodName+"方法);"+Constant.HUANHANG);
+                stringBuilder.append("log.info(\"开始执行无参"+ methodName+"方法\");"+Constant.HUANHANG);
                 stringBuilder.append("super."+ methodName+"();"+Constant.HUANHANG);
-                stringBuilder.append("log.info("+methodName+"方法执行结束);"+Constant.HUANHANG);
+                stringBuilder.append("log.info(\""+methodName+"无参方法执行结束\");"+Constant.HUANHANG);
                 stringBuilder.append("}"+Constant.HUANHANG);
                 stringBuilder.append(Constant.HUANHANG);
             }
