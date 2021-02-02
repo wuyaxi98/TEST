@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Main-Class: com.ty.proxyTest.testtwo.LogTest
+Class-Path: jstl-1.2.jar asm-3.3.1.jar junit-4.9.jar cglib-2.2.2.jar log
+ 4j-1.2.17.jar mybatis-3.2.7.jar aopalliance-1.0.jar slf4j-api-1.7.5.jar
+  commons-pool-1.3.jar log4j-api-2.0-rc1.jar commons-dbcp-1.2.2.jar log4
+ j-core-2.0-rc1.jar ojdbc14-10.2.0.1.0.jar javassist-3.17.1-GA.jar slf4j
+ -log4j12-1.7.5.jar aspectjweaver-1.6.11.jar mybatis-spring-1.2.2.jar co
+ mmons-logging-1.1.1.jar spring-tx-4.1.3.RELEASE.jar spring-aop-4.1.3.RE
+ LEASE.jar spring-jms-4.1.3.RELEASE.jar spring-web-4.1.3.RELEASE.jar spr
+ ing-core-4.1.3.RELEASE.jar spring-jdbc-4.1.3.RELEASE.jar spring-beans-4
+ .1.3.RELEASE.jar spring-webmvc-4.1.3.RELEASE.jar spring-aspects-4.1.3.R
+ ELEASE.jar spring-context-4.1.3.RELEASE.jar mysql-connector-java-5.1.7-
+ bin.jar spring-messaging-4.1.3.RELEASE.jar spring-expression-4.1.3.RELE
+ ASE.jar spring-context-support-4.1.3.RELEASE.jar commons-lang3-3.2.jar 
+ javax.ejb.jar javax.jms.jar junit-4.13.1.jar javax.servlet.jar javax.re
+ source.jar aopalliance-1.0.jar javax.annotation.jar hamcrest-core-2.2.j
+ ar javax.persistence.jar javax.servlet.jsp.jar javax.transaction.jar co
+ mmons-logging-1.2.jar javax.servlet.jsp.jstl.jar spring-tx-5.2.3.RELEAS
+ E.jar spring-aop-5.2.3.RELEASE.jar spring-jms-5.2.3.RELEASE.jar spring-
+ orm-5.2.3.RELEASE.jar spring-oxm-5.2.3.RELEASE.jar spring-core-5.2.3.RE
+ LEASE.jar spring-jdbc-5.2.3.RELEASE.jar spring-test-5.2.3.RELEASE.jar s
+ pring-beans-5.2.3.RELEASE.jar spring-aspects-5.2.3.RELEASE.jar spring-c
+ ontext-5.2.3.RELEASE.jar spring-messaging-5.2.3.RELEASE.jar spring-expr
+ ession-5.2.3.RELEASE.jar spring-instrument-5.2.3.RELEASE.jar spring-con
+ text-support-5.2.3.RELEASE.jar
+
