@@ -20,13 +20,12 @@ public class ReflectUtils {
     }
 
 
-    public static String addClass(Class fatherName)throws Exception{
+    public static String addClass(Class fatherName) throws Exception{
         String sunName = fatherName.getSimpleName()+"Impl";
         StringBuilder stringBuilder = new StringBuilder();
-
-        stringBuilder.append("import "+ fatherName.getPackage()+";"+ Constant.HUANHANG);
+        stringBuilder.append("package  "+ fatherName.getPackage().getName()+";"+ Constant.HUANHANG);
         stringBuilder.append(Constant.HUANHANG);
-
+        stringBuilder.append("import "+ fatherName.getPackage().getName()+";"+ Constant.HUANHANG);
         stringBuilder.append("import org.slf4j.Logger;"+Constant.HUANHANG);
         stringBuilder.append("import org.slf4j.LoggerFactory;"+Constant.HUANHANG);
         stringBuilder.append(Constant.HUANHANG);
@@ -38,10 +37,7 @@ public class ReflectUtils {
         return  stringBuilder.toString();
     }
 
-
-
-
-    public static String addConstructors(Class fatherName)throws Exception{
+    public static String addConstructors(Class fatherName) throws Exception{
         Constructor[]  constructors = fatherName.getDeclaredConstructors();
         StringBuilder stringBuilder = new StringBuilder();
         if (ArrayUtils.isNotEmpty(constructors)) {
@@ -72,20 +68,15 @@ public class ReflectUtils {
 
             }
 
-
-
-
         }
         return stringBuilder.toString();
     }
 
 
-    public static String addMethods(Class fatherName)throws Exception{
+    public static String addMethods(Class fatherName) throws Exception{
         Method[] Methods = fatherName.getDeclaredMethods();
         StringBuilder stringBuilder = new StringBuilder();
         for (Method method:Methods) {
-//            method.setAccessible(true);
-//            System.out.println(method);
             String methodName = method.getName();
             Parameter[] params = method.getParameters();
             Class[] paramsTypes = method.getParameterTypes();
@@ -100,9 +91,12 @@ public class ReflectUtils {
                 }
                 stringBuilder.append(paramsTypes[params.length-1].getSimpleName() + " " + params[params.length-1].getName() );
                 stringBuilder.append(")" +" {"+Constant.HUANHANG);;
-                stringBuilder.append("log.info(开始执行"+ methodName+"方法);"+Constant.HUANHANG);
-                stringBuilder.append("super."+ methodName+"();"+Constant.HUANHANG);
-                stringBuilder.append("log.info("+methodName+"方法执行结束);"+Constant.HUANHANG);
+                stringBuilder.append("log.info(\"开始执行"+ methodName+"方法\");"+Constant.HUANHANG);
+                for (int i = 0; i < params.length - 1; i++) {
+                    stringBuilder.append("super."+ methodName +"("+ params[i].getName()+ ",");
+                }
+                stringBuilder.append(params[params.length - 1].getName() + ");" + Constant.HUANHANG);
+                stringBuilder.append("log.info(\""+methodName+"方法执行结束\");"+Constant.HUANHANG);
                 stringBuilder.append("}"+Constant.HUANHANG);
                 stringBuilder.append(Constant.HUANHANG);
 
