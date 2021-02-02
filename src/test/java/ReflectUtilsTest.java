@@ -13,12 +13,12 @@ public class ReflectUtilsTest {
 
 
     }
-    public static OutputStreamWriter generateClass(Class fathername) throws Exception{
-        OutputStreamWriter dos = ReflectUtils.CreatFile(fathername);
+    public static OutputStreamWriter generateClass(Class fatherClassName) throws Exception{
+        OutputStreamWriter dos = ReflectUtils.CreatFile(fatherClassName);
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(ReflectUtils.addClass(fathername));
-        stringBuilder.append(ReflectUtils.addConstructors(fathername));
-        stringBuilder.append(ReflectUtils.addMethods(fathername));
+        stringBuilder.append(ReflectUtils.addClass(fatherClassName));
+        stringBuilder.append(ReflectUtils.addConstructors(fatherClassName));
+        stringBuilder.append(ReflectUtils.addMethods(fatherClassName));
         dos.write(stringBuilder.toString());
         dos.write("}"+Constant.HUANHANG);
         dos.close();
