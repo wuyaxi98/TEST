@@ -25,7 +25,7 @@ public class ReflectUtilsFirst {
         FileOutputStream fos = new FileOutputStream(f);
         OutputStreamWriter dos = new OutputStreamWriter(fos);
 
-        dos.write("import "+ fatherName.getPackage()+";"+ Constant.HUANHANG);
+        dos.write("import "+ fatherName.getPackage().getName()+";"+ Constant.HUANHANG);
         dos.append(Constant.HUANHANG);
 
         dos.write("import org.slf4j.Logger;"+Constant.HUANHANG);
