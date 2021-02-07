@@ -9,12 +9,12 @@
         <module name="ProxyDemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="11" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ProxyDemo" options="" />
+      <module name="ProxyDemo" options="-parameters" />
     </option>
   </component>
 </project>
